@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
+  uid:{
+    type: mongoose.Schema.ObjectId,
+    required: true 
+  },
   name:{
     type: String,
     required: true
@@ -18,7 +22,7 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  image:{
+  profile_pic:{
     type: String,
     default: 'https://res.cloudinary.com/dxqjzjx7j/image'
   },
@@ -40,10 +44,8 @@ const userSchema = new mongoose.Schema({
   pincode:{
     type: Number,
   }
-  // resetPasswordToken: String,
-  // resetPasswordExpire: Date
 });
 
-const User = mongoose.model('User', userSchemaSchema);
+const User = mongoose.model('User', userSchema);
 
 export default User;
