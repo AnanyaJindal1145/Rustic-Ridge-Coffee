@@ -36,5 +36,5 @@ const orderSchema = new mongoose.Schema({
         default: Date.now
     }
 });
-const Order = mongoose.model('Order', userSchema);
+const Order = mongoose.model('Order', orderSchema);
 export default Order;
