@@ -7,7 +7,6 @@ import User from './models/user.js';
 import Product from './models/product.js';
 import Order from './models/order.js';
 import cookieParser from 'cookie-parser';
-import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import multer from 'multer';
 import dotenv from 'dotenv';
